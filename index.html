@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canary Films Check-In - On Track to Terror</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Canary Films Premiere</h1>
+            <h2>On Track to Terror - Check-In</h2>
+        </header>
+
+        <div class="controls">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for guest..." autocomplete="off">
+                <button id="clearSearch" class="btn btn-secondary">Clear</button>
+            </div>
+            
+            <div class="file-upload">
+                <label for="guestFile" class="btn btn-primary">Load Guest List</label>
+                <input type="file" id="guestFile" accept=".json" style="display: none;">
+            </div>
+
+            <div class="tabs">
+                <button id="pendingTab" class="tab-btn active">Pending (<span id="pendingCount">0</span>)</button>
+                <button id="arrivedTab" class="tab-btn">Arrived (<span id="arrivedCount">0</span>)</button>
+            </div>
+        </div>
+
+        <div id="pendingList" class="guest-list active">
+            <div class="empty-state">
+                <p>No guests pending check-in</p>
+                <p class="hint">Load a guest list to get started</p>
+            </div>
+        </div>
+
+        <div id="arrivedList" class="guest-list">
+            <div class="empty-state">
+                <p>No guests have arrived yet</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

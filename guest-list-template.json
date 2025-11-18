@@ -1,0 +1,55 @@
+{
+  "event": "On Track to Terror Premiere",
+  "date": "2024-01-15",
+  "venue": "Canary Films Cinema",
+  "guests": [
+    {
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "company": "ABC Productions",
+      "partySize": 1
+    },
+    {
+      "name": "Sarah Johnson",
+      "email": "sarah.j@example.com",
+      "company": "",
+      "partySize": 2
+    },
+    {
+      "name": "Michael Chen",
+      "email": "m.chen@filmstudio.com",
+      "company": "Film Studio Inc",
+      "partySize": 1
+    },
+    {
+      "name": "Emma Williams",
+      "email": "emma.w@example.com",
+      "company": "Williams Media",
+      "partySize": 3
+    },
+    {
+      "name": "David Brown",
+      "email": "david.brown@example.com",
+      "company": "",
+      "partySize": 1
+    },
+    {
+      "name": "Lisa Anderson",
+      "email": "l.anderson@example.com",
+      "company": "Anderson Entertainment",
+      "partySize": 2
+    },
+    {
+      "name": "Robert Taylor",
+      "email": "rtaylor@example.com",
+      "company": "",
+      "partySize": 1
+    },
+    {
+      "name": "Jennifer Martinez",
+      "email": "j.martinez@example.com",
+      "company": "Martinez Films",
+      "partySize": 4
+    }
+  ]
+}

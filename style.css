@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.controls {
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #667eea;
+}
+
+.file-upload {
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+    width: 100%;
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #dee2e6;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.tab-btn:hover {
+    background: #f8f9fa;
+}
+
+.tab-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.guest-list {
+    display: none;
+    padding: 20px;
+    min-height: 400px;
+}
+
+.guest-list.active {
+    display: block;
+}
+
+.guest-card {
+    background: white;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.guest-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.guest-info {
+    flex: 1;
+}
+
+.guest-name {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.guest-details {
+    color: #6c757d;
+    font-size: 1em;
+}
+
+.guest-email {
+    display: block;
+    margin-top: 3px;
+}
+
+.guest-party {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.guest-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6c757d;
+}
+
+.empty-state p {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.empty-state .hint {
+    font-size: 1em;
+    color: #adb5bd;
+}
+
+.arrived-badge {
+    background: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.arrived-time {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+/* Touchscreen optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        padding: 20px 35px;
+        font-size: 1.2em;
+    }
+    
+    .guest-card {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+    
+    .guest-name {
+        font-size: 1.6em;
+    }
+    
+    #searchInput {
+        padding: 18px 22px;
+        font-size: 1.2em;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    header h2 {
+        font-size: 1.2em;
+    }
+    
+    .guest-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .guest-actions {
+        margin-top: 15px;
+    }
+    
+    .btn-success {
+        width: 100%;
+    }
+}
